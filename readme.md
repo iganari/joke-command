@@ -34,6 +34,8 @@ n: Disable bold text
 ! @ # $ % ^ & ): Change the color of the matrix to the corresponding color: ! - red, @ - green, # - yellow, $ - blue, % - magenta, ^ - cyan, & - white, ) - black. 
 ```
 
+http://www.asty.org/cmatrix/
+
 ### Use asciiquarium
 
 ### 参考URL
