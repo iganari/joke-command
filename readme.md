@@ -38,6 +38,10 @@ http://www.asty.org/cmatrix/
 
 ### Use asciiquarium
 
+https://github.com/cmatsuoka/asciiquarium
+
+--> cpanがキツイ
+
 ### 参考URL
 
 http://qiita.com/Hiroki_lzh/items/8cf206d54f91e29b3912
