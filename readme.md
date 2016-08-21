@@ -1,6 +1,6 @@
 # How to Use
 
-### Use asciiquarium
+### Use cmatrix
 
 ```
 $ cmatrix
@@ -34,6 +34,13 @@ n: Disable bold text
 ! @ # $ % ^ & ): Change the color of the matrix to the corresponding color: ! - red, @ - green, # - yellow, $ - blue, % - magenta, ^ - cyan, & - white, ) - black. 
 ```
 
+http://www.asty.org/cmatrix/
+
+### Use asciiquarium
+
+https://github.com/cmatsuoka/asciiquarium
+
+--> cpanがキツイ
 
 ### 参考URL
 
