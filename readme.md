@@ -3,7 +3,7 @@
 ### set up
 
 ```
-$ cd /opsfiles/vagrant
+$ cd opsfiles/vagrant
 $ vagrant up && sh provision
 ```
 
