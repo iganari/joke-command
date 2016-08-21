@@ -28,5 +28,8 @@
 - name: register pokemon alias to bashrc
   lineinfile: >
     dest='/home/vagrant/.bashrc'
-    backrefs=yes
-    line='alias py='pokemonsay'
+    backup=yes
+    line="{{ item }}"
+  with_items:
+    - alias py='pokemonsay'
+    - /home/vagrant/bin/pokemonsay hello!! `whoami`
