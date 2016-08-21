@@ -1,0 +1,36 @@
+---
+#
+# roles/pokemonsay/tasks/main.yml
+#
+
+- name: install required package
+  become: true
+  apt: pkg="{{ item }}" update_cache=yes state=latest
+  with_items:
+    - fortune
+    - cowsay
+
+- name: change mode
+  become: true
+  file: path=/opt mode=0777
+
+- name: get pokemonsay from github
+  git: > 
+    repo=https://github.com/possatti/pokemonsay.git
+    dest=/opt/pokemonsay
+    version=master
+
+- name: install pokemonsay from shell
+  command: > 
+    ./install.sh
+    chdir=/opt/pokemonsay
+
+- name: register pokemon alias to bashrc
+  lineinfile: >
+    dest='/home/vagrant/.bashrc'
+    backup=yes
+    line="{{ item }}"
+  with_items:
+    - alias py='pokemonsay'
+    - alias pk='pokemonthink'
+    - /home/vagrant/bin/pokemonsay hello!! `whoami`

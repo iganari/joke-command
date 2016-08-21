@@ -9,3 +9,4 @@
     backrefs=yes
     regexp='#force_color_prompt=yes'
     line='force_color_prompt=yes'
+    backup=yes

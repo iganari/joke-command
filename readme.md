@@ -1,6 +1,6 @@
 # How to Use
 
-### Use asciiquarium
+### Use cmatrix
 
 ```
 $ cmatrix
@@ -34,6 +34,32 @@ n: Disable bold text
 ! @ # $ % ^ & ): Change the color of the matrix to the corresponding color: ! - red, @ - green, # - yellow, $ - blue, % - magenta, ^ - cyan, & - white, ) - black. 
 ```
 
+http://www.asty.org/cmatrix/
+
+###  Use Pokemonsay
+
+```
+$ pokemonsay Hello World!
+$ py         Hello World!
+============
+### if you want to specify a pokemon
+$ pokemonsay --pokemon Pikachu Hello World!
+```
+
+### Use Pikemonthink
+
+```
+$ pokemonthink I am sleepy...
+```
+
+https://github.com/possatti/pokemonsay
+
+
+### Use asciiquarium
+
+https://github.com/cmatsuoka/asciiquarium
+
+--> cpanがキツイ
 
 ### 参考URL
 
