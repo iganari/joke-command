@@ -32,4 +32,5 @@
     line="{{ item }}"
   with_items:
     - alias py='pokemonsay'
+    - alias pk='pokemonthink'
     - /home/vagrant/bin/pokemonsay hello!! `whoami`
