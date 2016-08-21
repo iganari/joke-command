@@ -12,7 +12,7 @@
 
 - name: change mode
   become: true
-  command: chmod 777 /opt
+  file: path=/opt mode=0777
 
 - name: get pokemonsay from github
   git: > 
