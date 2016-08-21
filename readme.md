@@ -36,6 +36,25 @@ n: Disable bold text
 
 http://www.asty.org/cmatrix/
 
+###  Use Pokemonsay
+
+```
+$ pokemonsay Hello World!
+$ py         Hello World!
+============
+### if you want to specify a pokemon
+$ pokemonsay --pokemon Pikachu Hello World!
+```
+
+### Use Pikemonthink
+
+```
+$ pokemonthink I am sleepy...
+```
+
+https://github.com/possatti/pokemonsay
+
+
 ### Use asciiquarium
 
 https://github.com/cmatsuoka/asciiquarium
