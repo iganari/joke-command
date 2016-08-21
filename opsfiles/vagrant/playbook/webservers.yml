@@ -8,6 +8,7 @@
     - common
     - vagrant
     - cmatrix
+    - sl
 
 - hosts: vagrant-sudo
   roles:
