@@ -1,5 +1,12 @@
 # How to Use
 
+### set up
+
+```
+$ cd opsfiles/vagrant
+$ vagrant up && sh provision.sh
+```
+
 ### Use cmatrix
 
 ```
