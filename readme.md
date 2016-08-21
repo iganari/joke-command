@@ -61,6 +61,13 @@ $ pokemonthink I am sleepy...
 
 https://github.com/possatti/pokemonsay
 
+### Use SL
+
++ There is no end of comannd
+
+```
+$ slf
+```
 
 ### Use asciiquarium
 

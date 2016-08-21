@@ -1,0 +1,29 @@
+---
+#
+# roles/cmatrix/tasks/main.yml
+#
+
+- name: install sl
+  apt: pkg=sl update_cache=yes state=latest
+
+- name: mkdir sl
+  file: > 
+    path=/opt/sl
+    state=directory
+    owner=root
+    group=root
+    mode=755
+
+- name: copy shell scripts
+  copy: >
+    src=roles/sl/files/sl-forever.sh
+    dest=/opt/sl/sl-forever.sh
+    owner=root
+    group=root
+    mode=755
+
+- name: register cmatrix alias to bash
+  lineinfile: >
+    dest='/home/vagrant/.bashrc'
+    backup=yes
+    line="alias slf='sh /opt/sl/sl-forever.sh'"
