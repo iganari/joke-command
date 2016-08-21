@@ -4,7 +4,7 @@
 
 ```
 $ cd opsfiles/vagrant
-$ vagrant up && sh provision
+$ vagrant up && sh provision.sh
 ```
 
 ### Use cmatrix
