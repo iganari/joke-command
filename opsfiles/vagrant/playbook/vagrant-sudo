@@ -1,4 +1,0 @@
-[vagrant-sudo]
-192.168.33.19
-[vagrant-sudo:vars]
-ansible_ssh_user=vagrant
