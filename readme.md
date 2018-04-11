@@ -1,4 +1,26 @@
-# How to Use
+# joke-command
+
+## cmatrix
+
+### 使い方
+
+WIP
+
+### 説明
+
+WIP
+
+## asciiquarium
+
+### 使い方
+
+WIP
+
+### 説明
+
+WIP
+
+
 
 ### set up
 
@@ -68,12 +90,6 @@ https://github.com/possatti/pokemonsay
 ```
 $ slf
 ```
-
-### Use asciiquarium
-
-https://github.com/cmatsuoka/asciiquarium
-
---> cpanがキツイ
 
 ### 参考URL
 
