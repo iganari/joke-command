@@ -1,0 +1,17 @@
+---
+#
+# webservers.yml
+#
+
+- hosts: vagrant
+  roles:
+    - role: common
+      tags: common
+    - role: vagrant
+      tags: vagrant
+    - role: docker
+      tags: docker
+    # - role: cmatrix
+    #   tags: cmatrix
+    # - role: sl
+    #   tags: sl
