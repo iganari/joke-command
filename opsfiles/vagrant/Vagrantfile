@@ -1,3 +1,14 @@
+$script = <<SCRIPT
+  cd /develop/joke-command/
+  /bin/bash provision.sh
+  cd playbook  
+  ansible-playbook -i inventoryfile/vagrant servers.yml -l $1
+  # ansible-playbook -i inventoryfile/vagrant servers.yml -l $1 --tag common
+  # ansible-playbook -i inventoryfile/vagrant servers.yml -l $1 --tag vagrant
+  # ansible-playbook -i inventoryfile/vagrant servers.yml -l $1 --tag docker
+SCRIPT
+
+
 Vagrant.configure(2) do |config|
   # config.vbguest.auto_update = false
 
@@ -5,35 +16,49 @@ Vagrant.configure(2) do |config|
     config.cache.scope = :box
   end
 
-  config.vm.define :svr do |server|
-    ### determined specific IP.
-    server.vm.network "private_network", ip: "192.168.33.19", auto_config: false
-    ### vbox name
-    server.vm.hostname = 'joke-command'
-    ### box setting
-    server.vm.box = "bento/ubuntu-16.04"
-    ### bug fix
-    server.vm.provision 'shell', inline: "ifconfig enp0s8 192.168.33.19" 
-    server.vm.provision 'shell', inline: "sed -i 's/exit\ 0/ifconfig\ enp0s8\ 192\.168\.33\.19/g' /etc/rc.local" 
-    server.vm.provision 'shell', inline: "echo 'exit 0' >> /etc/rc.local" 
-    server.vm.provision 'shell', inline: "chmod 644 /home/vagrant/.ssh/authorized_keys" 
- end
+  vhosts = [
+    {
+      "config_name" => "joke-command",
+      "instance_name" => "joke-cmd-vg",
+      "ip" => "192.168.33.64",
+      "vbox" => "bento/ubuntu-16.04",
+      "cpu" => 1,
+      "memory" => 1024,
+      "inventory" => "vagrant"
+    },
+  ]
 
-  config.vm.provider "virtualbox" do |vb|
-    ### vagrant hostname 
-    vb.name = "joke-command"
-    vb.customize ['modifyvm', :id,"--memory", 512]
-    vb.customize ['modifyvm', :id,"--natdnshostresolver1", "on"]
-    vb.customize ['modifyvm', :id,"--natdnsproxy1", "on"]
-  end  
- 
-  ### settitng of synced_folder
-  config.vm.synced_folder "../../", "/srv/joke-command", \
-    :create => true, \
-    :owner  => 'vagrant', \
-    :group  => 'vagrant', \
-    :mount_options => ['dmode=755,fmode=755'] 
-
-  config.vm.provision :shell, :path => "ssh/init.sh"
- 
+  vhosts.each do |vhost|
+    config.vm.define vhost["config_name"] do |server|
+      ### determined specific IP.
+      server.vm.network "private_network", ip: vhost["ip"]
+      ### hostname of server
+      server.vm.hostname = vhost["instance_name"]
+      ### box setting
+      server.vm.box = vhost["vbox"]
+      ### vm setting
+      server.vm.provider "virtualbox" do |vb|
+        ### name of virtualbox
+        vb.name = vhost["instance_name"]
+        ### spec define
+        vb.cpus = vhost["cpu"]
+        vb.memory = vhost["memory"]
+        vb.customize ['modifyvm', :id,"--natdnshostresolver1", "on"]
+        vb.customize ['modifyvm', :id,"--natdnsproxy1", "on"]
+      end
+  
+      ### settitng of synced_folder
+      server.vm.synced_folder "../../", "/develop/joke-command", \
+        :create => true, \
+        :owner  => 'vagrant', \
+        :group  => 'vagrant', \
+        :mount_options => ['dmode=755,fmode=755']
+  
+      server.vm.provision "shell" do |shell|
+        shell.inline = $script
+        shell.args   = vhost["inventory"]
+      end
+    end
+  end
 end
+
