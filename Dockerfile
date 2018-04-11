@@ -1,1 +1,4 @@
-FROM igaguri/base-ubuntu16
+FROM igaguri/base-ubuntu-1604
+MAINTAINER iganari
+
+
