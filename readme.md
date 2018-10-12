@@ -16,13 +16,15 @@ docker run --rm -it u-xenia cmatrix
 
 ### 使い方
 
-WIP
++ 基本
 
-### 説明
+```
+docker run --rm -it u-xenia asciiquarium    
+```
 
-WIP
 
 
+***
 
 ### set up
 
