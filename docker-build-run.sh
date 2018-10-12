@@ -2,7 +2,7 @@
 
 set -x
 
-_I_TAG='u-xenia'
+_I_TAG='joke-cmd-img'
 docker build . -t  ${_I_TAG}
 
 BASEPATH=$(cd `dirname $0`; pwd)
