@@ -1,4 +1,30 @@
-# How to Use
+# joke-command
+
+:warning: WIP :warning:
+
+## cmatrix
+
+### 使い方
+
++ 基本
+
+```
+docker run --rm -it u-xenia cmatrix
+```
+
+## asciiquarium
+
+### 使い方
+
++ 基本
+
+```
+docker run --rm -it u-xenia asciiquarium    
+```
+
+
+
+***
 
 ### set up
 
@@ -68,12 +94,6 @@ https://github.com/possatti/pokemonsay
 ```
 $ slf
 ```
-
-### Use asciiquarium
-
-https://github.com/cmatsuoka/asciiquarium
-
---> cpanがキツイ
 
 ### 参考URL
 
