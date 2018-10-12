@@ -1,21 +1,23 @@
-# How to Use
+# joke-command
 
-### set up
+:warning: WIP :warning:
 
-```
-$ cd opsfiles/vagrant
-$ vagrant up && sh provision.sh
-```
+## cmatrix
 
-### Use cmatrix
+### 使い方
 
-```
-$ cmatrix
-```
-
-+ Options:
++ 基本
 
 ```
+docker run --rm -it joke-cmd-img cmatrix
+```
+
++ オプション
+
+```
+### 起動時
+
+
 -a: Asynchronous scroll, more like the movie/original screensaver 
 -b: Partial bold text mode 
 -B: All bold text mode 
@@ -28,11 +30,10 @@ $ cmatrix
 -u [update]: Update delay (0-9, default 4). 
 -C [color]: Use color for matrix (default green). 
 ```
-
-+ Keystrokes available while running (not available in -s mode): 
-
-
 ```
+### 実行中
+
+
 a: Toggle asynch mode 
 b: Enable partial bold text 
 B: Enable all bold text 
@@ -41,9 +42,39 @@ n: Disable bold text
 ! @ # $ % ^ & ): Change the color of the matrix to the corresponding color: ! - red, @ - green, # - yellow, $ - blue, % - magenta, ^ - cyan, & - white, ) - black. 
 ```
 
+### 公式
+
 http://www.asty.org/cmatrix/
 
-###  Use Pokemonsay
+## asciiquarium
+
+### 使い方
+
++ 基本
+
+```
+docker run --rm -it joke-cmd-img asciiquarium    
+```
+
++ オプション
+
+条件 | オプション | 説明 
+--- | --- | ---
+起動時 | -c | クラシックモードで起動
+起動中	| q	| 中止
+起動中	| r	| 再描画
+起動中	| p	| 一時停止
+
+### 公式
+
+https://github.com/cmatsuoka/asciiquarium
+
+
+***
+
+## Pokemonsay
+
+:warning: WIP :warning:
 
 ```
 $ pokemonsay Hello World!
@@ -53,7 +84,7 @@ $ py         Hello World!
 $ pokemonsay --pokemon Pikachu Hello World!
 ```
 
-### Use Pikemonthink
+### Use Pokemonthink
 
 ```
 $ pokemonthink I am sleepy...
@@ -61,19 +92,15 @@ $ pokemonthink I am sleepy...
 
 https://github.com/possatti/pokemonsay
 
-### Use SL
+## Use SL
+
+:warning: WIP :warning:
 
 + There is no end of comannd
 
 ```
 $ slf
 ```
-
-### Use asciiquarium
-
-https://github.com/cmatsuoka/asciiquarium
-
---> cpanがキツイ
 
 ### 参考URL
 
