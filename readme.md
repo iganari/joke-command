@@ -84,7 +84,7 @@ $ py         Hello World!
 $ pokemonsay --pokemon Pikachu Hello World!
 ```
 
-### Use Pikemonthink
+### Use Pokemonthink
 
 ```
 $ pokemonthink I am sleepy...
