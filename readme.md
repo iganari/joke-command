@@ -9,7 +9,7 @@
 + 基本
 
 ```
-docker run --rm -it u-xenia cmatrix
+docker run --rm -it joke-cmd-img cmatrix
 ```
 
 ## asciiquarium
@@ -19,7 +19,7 @@ docker run --rm -it u-xenia cmatrix
 + 基本
 
 ```
-docker run --rm -it u-xenia asciiquarium    
+docker run --rm -it joke-cmd-img asciiquarium    
 ```
 
 
