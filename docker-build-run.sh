@@ -2,6 +2,13 @@
 
 set -x
 
-_I_TAG='u-xenia'
+_I_TAG='joke-cmd-img'
 docker build . -t  ${_I_TAG}
-sh ./docker-run.sh ${_I_TAG}
+
+BASEPATH=$(cd `dirname $0`; pwd)
+
+docker run --rm -it -v ${BASEPATH}:/usr/local/iganari \
+                    -w /usr/local/iganari \
+                    --name ${_I_TAG} \
+                    ${_I_TAG} \
+                    /bin/bash
