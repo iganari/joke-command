@@ -22,6 +22,18 @@ docker run --rm -it joke-cmd-img cmatrix
 docker run --rm -it joke-cmd-img asciiquarium    
 ```
 
++ オプション
+
+条件 | オプション | 説明 
+--- : --- | ---
+起動時 | -c | クラシックモードで起動
+起動中	| q	| 中止
+起動中	| r	| 再描画
+起動中	| p	| 一時停止
+
+### 公式
+
+https://github.com/cmatsuoka/asciiquarium
 
 
 ***
