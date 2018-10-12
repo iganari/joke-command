@@ -1,14 +1,16 @@
 # joke-command
 
+:warning: WIP :warning:
+
 ## cmatrix
 
 ### 使い方
 
-WIP
++ 基本
 
-### 説明
-
-WIP
+```
+docker run --rm -it u-xenia cmatrix
+```
 
 ## asciiquarium
 
