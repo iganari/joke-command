@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/iganarix/joke-command.svg)](https://microbadger.com/images/iganarix/joke-command "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/iganarix/joke-command.svg)](https://microbadger.com/images/iganarix/joke-command "Get your own version badge on microbadger.com")
+
 # joke-command
 
 :warning: WIP :warning:
