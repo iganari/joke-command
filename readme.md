@@ -2,6 +2,12 @@
 
 :warning: WIP :warning:
 
+## 出来ること
+
++ [cmatrix](https://github.com/iganari/joke-command/tree/master#cmatrix)
++ []()
+
+
 ## cmatrix
 
 ### 使い方
