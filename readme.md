@@ -18,7 +18,7 @@
 + 基本
 
 ```
-docker run --rm -it joke-cmd-img cmatrix
+docker run --rm -it iganarix/joke-command cmatrix
 ```
 
 + オプション
@@ -62,7 +62,7 @@ http://www.asty.org/cmatrix/
 + 基本
 
 ```
-docker run --rm -it joke-cmd-img asciiquarium    
+docker run --rm -it iganarix/joke-command asciiquarium    
 ```
 
 + オプション
