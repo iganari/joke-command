@@ -8,7 +8,7 @@
 
 + [cmatrix](https://github.com/iganari/joke-command/tree/master#cmatrix)
 + [asciiquarium](https://github.com/iganari/joke-command/blob/master/readme.md#asciiquarium)
-+ wIP
++ [nyancat]
 + WIP
 
 ## cmatrix
@@ -77,6 +77,17 @@ docker run --rm -it iganarix/joke-command asciiquarium
 ### 公式
 
 https://github.com/cmatsuoka/asciiquarium
+
+## Nyancat
+
+### 使い方
+
++ 基本
+
+```
+docker run --rm -it iganarix/joke-command nyancat
+```
+
 
 
 ***
