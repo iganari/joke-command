@@ -14,3 +14,7 @@ RUN add-apt-repository -y ppa:ytvwld/asciiquarium && \
     apt-get install -y asciiquarium &&\
     cp $(find / -name "asciiquarium" | grep -v doc | grep -v menu) /usr/local/bin/ &&\
     chmod 755 /usr/local/bin/asciiquarium
+
+
+### add nyancat
+RUN apt-get install -y nyancat

@@ -1,6 +1,15 @@
+[![](https://images.microbadger.com/badges/image/iganarix/joke-command.svg)](https://microbadger.com/images/iganarix/joke-command "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/iganarix/joke-command.svg)](https://microbadger.com/images/iganarix/joke-command "Get your own version badge on microbadger.com")
+
 # joke-command
 
 :warning: WIP :warning:
+
+## 出来ること
+
++ [cmatrix](https://github.com/iganari/joke-command/tree/master#cmatrix)
++ [asciiquarium](https://github.com/iganari/joke-command/blob/master/readme.md#asciiquarium)
++ wIP
++ WIP
 
 ## cmatrix
 
@@ -9,7 +18,7 @@
 + 基本
 
 ```
-docker run --rm -it joke-cmd-img cmatrix
+docker run --rm -it iganarix/joke-command cmatrix
 ```
 
 + オプション
@@ -53,7 +62,7 @@ http://www.asty.org/cmatrix/
 + 基本
 
 ```
-docker run --rm -it joke-cmd-img asciiquarium    
+docker run --rm -it iganarix/joke-command asciiquarium    
 ```
 
 + オプション
