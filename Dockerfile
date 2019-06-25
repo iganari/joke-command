@@ -1,20 +1,26 @@
-FROM iganarix/base-ubuntu-16.04
-# https://hub.docker.com/r/iganarix/base-ubuntu-16.04/
+FROM iganarix/os-ubuntu-18.04
+# https://hub.docker.com/r/iganarix/os-ubuntu-18.04/
 
 MAINTAINER iganari
 
-### install cmatrix
+### Install cmatrix && nyancat
 RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y cmatrix
+    apt install -y \
+                --no-install-recommends \
+                cmatrix \
+                nyancat
+
+### Install asciiquarium
+RUN apt install -y \
+                --no-install-recommends \
+                libcurses-perl wget unzip make -y && \
+    yes '' | cpan -i YAML && \
+    yes '' | cpan -i Term::Animation && \
+    cd /usr/local/src && \
+    wget https://github.com/cmatsuoka/asciiquarium/archive/master.zip -O asciiquarium.zip && \
+    unzip asciiquarium.zip -d /usr/local/src/ && \
+    ln -s /usr/local/src/asciiquarium-master/asciiquarium /usr/local/bin/asciiquarium
 
 
-### add asciiquarium
-RUN add-apt-repository -y ppa:ytvwld/asciiquarium && \
-    apt-get update &&\
-    apt-get install -y asciiquarium &&\
-    cp $(find / -name "asciiquarium" | grep -v doc | grep -v menu) /usr/local/bin/ &&\
-    chmod 755 /usr/local/bin/asciiquarium
-
-
-### add nyancat
-RUN apt-get install -y nyancat
+# ### add nyancat
+# RUN apt-get install -y nyancat
