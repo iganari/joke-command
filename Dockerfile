@@ -15,13 +15,13 @@ MAINTAINER iganari
 #     cp $(find / -name "asciiquarium" | grep -v doc | grep -v menu) /usr/local/bin/ &&\
 #     chmod 755 /usr/local/bin/asciiquarium
 
-RUN apt install libcurses-perl wget unzip make -y
-RUN yes '' | cpan -i YAML
-RUN yes '' | cpan -i Term::Animation
-RUN cd /usr/local/src
-RUN wget https://github.com/cmatsuoka/asciiquarium/archive/master.zip -O asciiquarium.zip
-RUN unzip asciiquarium.zip -d /usr/local/src/
-RUN ln -s /usr/local/src/asciiquarium-master/asciiquarium /usr/local/bin/asciiquarium
+RUN apt install libcurses-perl wget unzip make -y && \
+    yes '' | cpan -i YAML && \
+    yes '' | cpan -i Term::Animation && \
+    cd /usr/local/src && \
+    wget https://github.com/cmatsuoka/asciiquarium/archive/master.zip -O asciiquarium.zip && \
+    unzip asciiquarium.zip -d /usr/local/src/ && \
+    ln -s /usr/local/src/asciiquarium-master/asciiquarium /usr/local/bin/asciiquarium
 
 
 # ### add nyancat
