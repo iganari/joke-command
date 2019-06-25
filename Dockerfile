@@ -3,13 +3,15 @@ FROM iganarix/os-ubuntu-18.04
 
 MAINTAINER iganari
 
-# ### install cmatrix
-# RUN DEBIAN_FRONTEND=noninteractive \
-#     apt-get install -y cmatrix
-# 
-# 
+### install cmatrix
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt install -y \
+                --no-install-recommends \
+                cmatrix
 
-RUN apt install libcurses-perl wget unzip make -y && \
+RUN apt install -y \
+                --no-install-recommends \
+                libcurses-perl wget unzip make -y && \
     yes '' | cpan -i YAML && \
     yes '' | cpan -i Term::Animation && \
     cd /usr/local/src && \
