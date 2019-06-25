@@ -3,12 +3,14 @@ FROM iganarix/os-ubuntu-18.04
 
 MAINTAINER iganari
 
-### install cmatrix
+### Install cmatrix && nyancat
 RUN DEBIAN_FRONTEND=noninteractive \
     apt install -y \
                 --no-install-recommends \
-                cmatrix
+                cmatrix \
+                nyancat
 
+### Install asciiquarium
 RUN apt install -y \
                 --no-install-recommends \
                 libcurses-perl wget unzip make -y && \
