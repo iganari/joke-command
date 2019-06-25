@@ -8,12 +8,6 @@ MAINTAINER iganari
 #     apt-get install -y cmatrix
 # 
 # 
-### add asciiquarium
-# RUN add-apt-repository -y ppa:ytvwld/asciiquarium && \
-#     apt-get update &&\
-#     apt-get install -y asciiquarium &&\
-#     cp $(find / -name "asciiquarium" | grep -v doc | grep -v menu) /usr/local/bin/ &&\
-#     chmod 755 /usr/local/bin/asciiquarium
 
 RUN apt install libcurses-perl wget unzip make -y && \
     yes '' | cpan -i YAML && \
